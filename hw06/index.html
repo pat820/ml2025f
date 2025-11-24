@@ -153,7 +153,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-在使用 YOLO 訓練主動脈瓣物件偵測時，因為競賽提供了完整程式碼，所以我主要專注在調整超參數，例如 batch、imgsz 與 epochs。透過多次實驗，我發現資料品質與標註一致性比模型結構更影響結果。雖然改動不多，但仍能從訓練曲線學到模型如何收斂與失敗。
+在訓練 YOLO 時，我發現 mAP50 分數在訓練與驗證階段看起來都很高，但提交到 test 後表現卻不一定好。這讓我了解到 mAP 並不能完全代表泛化能力，模型仍可能對特定資料過度擬合。因此，資料品質、一致的標註方式與合理的超參數設定，反而比追求高分更重要。
     </div>
   </div>
 
@@ -169,7 +169,7 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
           <td>Simple baseline - 描述</td>
         </tr>
@@ -179,12 +179,12 @@
           <td>Medium baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
           <td>Strong baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" ></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -263,5 +263,6 @@
 
 </body>
 </html>
+
 
 
